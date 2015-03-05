@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Bitcoin Alerter</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <div class="logo">
+    </br>
+      <a href="project.html"><img src="bitcoin_logo.png" alt="bitcoin logo" /></a>
+    </div>
+  </br></br>
+    <h3>Bitcoin Price Alerts by Text or Email</h3>
+  </br></br>
+    <div class="textOrEmail">
+      <h4>What kind of alert do you prefer?</h4>
+      <div class="chooseButton">
+      <input type="submit" name="textAlert" value="text" class="chooseText" />
+    </br>
+      <input type="submit" name="emailAlert" value="email" class="chooseEmail" />
+    </div>
+    </div>
+  </br></br>
+    <div class="inputText">
+        <h4>Text alert form</h4>
+      <form action="process.php" name="bitcoinTextSubmit" method="post">
+        <input type="text" name="phone" value="phone number" />
+        <input type="text" name="alertPrice" value="alert when 1BTC < xUSD" size="24" />
+        <input type="submit" name ="bitcoinSubmit" value="submit" class="textSubmit" />
+      </form>
+    </div>
+  </br></br>
+    <div class="inputEmail">
+    <h4>Email alert form</h4>
+    <form action="process.php" name="bitcoinEmailSubmit" method="post">
+      <input type="text" name="email" value="email address" size="40" />
+      <input type="text" name="alertPriceEmail" value="alert when 1BTC < xUSD" size="24" />
+      <input type="submit" name="bitcoinEmailSubmit" value="submit" class="emailSubmit" />
+    </form>
+  </div>
+    <div class="success">
+      <h4>Information submitted</h4>
+    </div>
+    <div class="footer">
+      <div class="removeAlert">
+      <input type="submit" name="removeAlert" value="remove alert" /></br>
+    </div>
+      <div class="removeSuccess"><h4>Information Removed</h4></div>
+      <div class="remover">
+        <form action="remover.php" name="remove" method="post">
+          <input type="text" name="phoneOrEmail" value="phone or email to remove" size="40" />
+          <input type="submit" name="removerSubmit" value="remove" class="removeSubmit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
